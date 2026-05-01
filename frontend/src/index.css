@@ -40,6 +40,61 @@
   }
 }
 
+/* Full-page route backdrop image (mountains / greenery) */
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.7s ease;
+  animation: backdropFade 0.9s ease-out both;
+}
+@keyframes backdropFade {
+  from { opacity: 0; transform: scale(1.05); }
+  to   { opacity: 1; transform: scale(1.0); }
+}
+/* Light parchment film over the backdrop so text remains readable, but colors come through */
+.page-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(244,235,217,0.30) 0%, rgba(244,235,217,0.10) 30%, rgba(244,235,217,0.40) 100%);
+}
+
+/* Floating leaves drifting across the page */
+.floating-leaves {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.floating-leaves .leaf {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2 C 22 8, 28 14, 16 30 C 4 14, 10 8, 16 2 Z' fill='%232D4233' opacity='0.85'/><path d='M16 4 L 16 28' stroke='%23556B45' stroke-width='0.8'/></svg>");
+  animation: drift linear infinite;
+}
+.floating-leaves .leaf.maple {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 3 L 19 11 L 27 9 L 22 16 L 28 22 L 20 21 L 18 29 L 16 24 L 14 29 L 12 21 L 4 22 L 10 16 L 5 9 L 13 11 Z' fill='%238B3A2B' opacity='0.85'/></svg>");
+}
+.floating-leaves .leaf.gold {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2 C 22 8, 28 14, 16 30 C 4 14, 10 8, 16 2 Z' fill='%23B8861B' opacity='0.85'/><path d='M16 4 L 16 28' stroke='%237A5A12' stroke-width='0.8'/></svg>");
+}
+@keyframes drift {
+  0%   { transform: translate(-5vw, -10vh) rotate(0deg); }
+  50%  { transform: translate(50vw, 50vh) rotate(180deg); }
+  100% { transform: translate(105vw, 110vh) rotate(360deg); }
+}
+
 /* Parchment grain texture overlay */
 .parchment-grain {
   position: fixed;

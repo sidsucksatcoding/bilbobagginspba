@@ -14,6 +14,8 @@ export const defaultContent = {
     siteSubtitle: "A Study of Bilbo Baggins",
   },
   home: {
+    pageBackdrop:
+      "https://images.unsplash.com/photo-1506260408121-e353d10b87c7?auto=format&fit=crop&q=80&w=2400",
     heroImage:
       "https://images.unsplash.com/photo-1691359065595-7c74aad7ab20?crop=entropy&cs=srgb&fm=jpg&q=85&w=1800",
     heroImageAlt: "Rolling green hills of the Shire",
@@ -29,6 +31,8 @@ export const defaultContent = {
   motivations: {
     pageTitle: "Motivations & Behaviors",
     pageSubtitle: "What drove the hobbit out of his hole?",
+    pageBackdrop:
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=2400",
     headerImage:
       "https://images.unsplash.com/photo-1697353260232-a43bf8371b81?crop=entropy&cs=srgb&fm=jpg&q=85&w=1800",
     headerImageAlt: "A winding forest path",
@@ -68,6 +72,8 @@ export const defaultContent = {
   philosophy: {
     pageTitle: "Philosophy & Kohlberg",
     pageSubtitle: "Stages of moral reasoning in a reluctant burglar",
+    pageBackdrop:
+      "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&q=80&w=2400",
     headerImage:
       "https://images.unsplash.com/photo-1519681393784-d120267933ba?crop=entropy&cs=srgb&fm=jpg&q=85&w=1800",
     headerImageAlt: "Mountain peaks under a starry sky",
@@ -121,6 +127,8 @@ export const defaultContent = {
   traits: {
     pageTitle: "Big Five Personality Traits",
     pageSubtitle: "Bilbo through the lens of OCEAN",
+    pageBackdrop:
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2400",
     headerImage:
       "https://images.unsplash.com/photo-1770410152354-cbd4836e87d3?crop=entropy&cs=srgb&fm=jpg&q=85&w=1800",
     headerImageAlt: "Misty mountains stacked in soft tones",
@@ -167,6 +175,8 @@ export const defaultContent = {
   events: {
     pageTitle: "Events",
     pageSubtitle: "Milestones along the road there and back again",
+    pageBackdrop:
+      "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&q=80&w=2400",
     headerImage:
       "https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?crop=entropy&cs=srgb&fm=jpg&q=85&w=1800",
     headerImageAlt: "Ancient stone bridge through mountains",

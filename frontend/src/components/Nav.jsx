@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Lock, Unlock, RotateCcw, Download } from "lucide-react";
+import { Lock, Unlock, RotateCcw, Download, Mountain } from "lucide-react";
 import { useContent } from "@/context/ContentContext";
 import PinDialog from "@/components/PinDialog";
 import { toast } from "sonner";
@@ -13,8 +13,8 @@ const links = [
   { to: "/events", label: "Events", testId: "nav-events" },
 ];
 
-export default function Nav() {
-  const { isEditing, setIsEditing, resetContent, exportContent } = useContent();
+export default function Nav({ sectionKey = "home" }) {
+  const { content, updateField, isEditing, setIsEditing, resetContent, exportContent } = useContent();
   const [pinOpen, setPinOpen] = useState(false);
 
   const handleLockClick = () => {
@@ -24,6 +24,18 @@ export default function Nav() {
     } else {
       setPinOpen(true);
     }
+  };
+
+  const handleBackdropEdit = () => {
+    const current = content[sectionKey]?.pageBackdrop || "";
+    const next = window.prompt(
+      "Paste a new background image URL for this page (mountains, forests, anything):",
+      current
+    );
+    if (next === null) return;
+    if (next.trim() === "") return;
+    updateField([sectionKey, "pageBackdrop"], next.trim());
+    toast.success("Page backdrop updated.");
   };
 
   return (
@@ -68,6 +80,14 @@ export default function Nav() {
         <div className="flex items-center gap-2">
           {isEditing && (
             <>
+              <button
+                onClick={handleBackdropEdit}
+                className="hidden sm:inline-flex items-center gap-1 text-xs font-ui tracking-widest uppercase text-forest hover:text-ember px-2 py-1 transition-colors"
+                title="Change this page's background image"
+                data-testid="nav-backdrop"
+              >
+                <Mountain className="h-3.5 w-3.5" /> Backdrop
+              </button>
               <button
                 onClick={exportContent}
                 className="hidden sm:inline-flex items-center gap-1 text-xs font-ui tracking-widest uppercase text-forest hover:text-ember px-2 py-1 transition-colors"
