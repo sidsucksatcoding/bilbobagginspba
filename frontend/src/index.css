@@ -60,6 +60,73 @@
   background: radial-gradient(ellipse at center, transparent 55%, rgba(60,40,20,0.25) 100%);
 }
 
+/* Shire ambient greenery — soft mossy washes at the edges */
+.shire-ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(60% 40% at 0% 0%, rgba(45,66,51,0.22) 0%, transparent 60%),
+    radial-gradient(55% 45% at 100% 0%, rgba(85,110,70,0.18) 0%, transparent 65%),
+    radial-gradient(70% 50% at 100% 100%, rgba(45,66,51,0.20) 0%, transparent 65%),
+    radial-gradient(65% 45% at 0% 100%, rgba(110,130,80,0.16) 0%, transparent 60%);
+}
+
+/* Decorative leaf/vine ornaments anchored to the four corners */
+.shire-leaves {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.55;
+}
+.shire-leaves::before,
+.shire-leaves::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.shire-leaves::before {
+  top: -20px;
+  left: -30px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%232D4233' stroke-width='1.2' stroke-linecap='round' opacity='0.85'><path d='M0 0 C 30 40, 60 70, 100 90'/><path d='M0 0 C 50 30, 80 60, 120 70'/><path d='M0 0 C 20 60, 40 100, 70 130'/></g><g fill='%232D4233' opacity='0.9'><ellipse cx='35' cy='40' rx='10' ry='5' transform='rotate(35 35 40)'/><ellipse cx='65' cy='65' rx='12' ry='5.5' transform='rotate(40 65 65)'/><ellipse cx='95' cy='85' rx='11' ry='5' transform='rotate(35 95 85)'/><ellipse cx='25' cy='80' rx='9' ry='4.5' transform='rotate(70 25 80)'/><ellipse cx='50' cy='110' rx='11' ry='5' transform='rotate(60 50 110)'/></g><g fill='%238B3A2B' opacity='0.7'><circle cx='80' cy='52' r='2.5'/><circle cx='110' cy='75' r='2'/><circle cx='40' cy='95' r='2'/></g></svg>");
+  transform: rotate(0deg);
+}
+.shire-leaves::after {
+  bottom: -20px;
+  right: -30px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%232D4233' stroke-width='1.2' stroke-linecap='round' opacity='0.85'><path d='M200 200 C 170 160, 140 130, 100 110'/><path d='M200 200 C 150 170, 120 140, 80 130'/><path d='M200 200 C 180 140, 160 100, 130 70'/></g><g fill='%232D4233' opacity='0.9'><ellipse cx='165' cy='160' rx='10' ry='5' transform='rotate(35 165 160)'/><ellipse cx='135' cy='135' rx='12' ry='5.5' transform='rotate(40 135 135)'/><ellipse cx='105' cy='115' rx='11' ry='5' transform='rotate(35 105 115)'/><ellipse cx='175' cy='120' rx='9' ry='4.5' transform='rotate(70 175 120)'/><ellipse cx='150' cy='90' rx='11' ry='5' transform='rotate(60 150 90)'/></g><g fill='%238B3A2B' opacity='0.7'><circle cx='120' cy='148' r='2.5'/><circle cx='90' cy='125' r='2'/><circle cx='160' cy='105' r='2'/></g></svg>");
+}
+
+/* Subtle green moss texture overlay */
+.shire-moss {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  background-image:
+    radial-gradient(1px 1px at 25% 35%, rgba(45,66,51,0.6) 50%, transparent 51%),
+    radial-gradient(1px 1px at 75% 60%, rgba(45,66,51,0.5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 45% 80%, rgba(45,66,51,0.5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 90% 20%, rgba(45,66,51,0.4) 50%, transparent 51%),
+    radial-gradient(1px 1px at 10% 70%, rgba(45,66,51,0.5) 50%, transparent 51%);
+  background-size: 240px 240px;
+}
+
+@media (max-width: 640px) {
+  .shire-leaves::before,
+  .shire-leaves::after {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /* Subtle paper fiber texture for cards */
 .paper-card {
   background-color: #FCF9F2;

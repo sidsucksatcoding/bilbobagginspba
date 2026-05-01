@@ -6,7 +6,10 @@ export default function Layout() {
   const location = useLocation();
   return (
     <div className="min-h-screen relative">
+      <div className="shire-ambient" aria-hidden="true" />
       <div className="parchment-grain" aria-hidden="true" />
+      <div className="shire-moss" aria-hidden="true" />
+      <div className="shire-leaves" aria-hidden="true" />
       <div className="parchment-vignette" aria-hidden="true" />
       <Nav />
       <main key={location.pathname} className="page-enter relative z-[2]" data-testid="page-main">
