@@ -1,0 +1,104 @@
+{
+  "theme": "Light",
+  "archetype": "High Fantasy / Parchment (Custom adaptation of Organic & Earthy)",
+  "design_philosophy": "Epic, adventurous, and ancient. A storybook or scholar's journal feel. No modern tech-SaaS styles, no purple gradients, no Inter/Roboto. Content is king, presented with rich texture and deep, warm colors.",
+  "colors": {
+    "background": {
+      "parchment": "#F4EBD9",
+      "parchment_dark": "#EAE0C8",
+      "paper": "#FCF9F2"
+    },
+    "text": {
+      "ink_dark": "#1A1A1A",
+      "ink_brown": "#2C2621",
+      "ink_light": "#5C5248"
+    },
+    "accent": {
+      "forest": "#2D4233",
+      "gold": "#D4AF37",
+      "ember": "#8B3A2B",
+      "edit_glow": "#D4AF37"
+    },
+    "border": {
+      "divider": "#D3C4A9",
+      "edit_dashed": "#8B3A2B"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cormorant Garamond, serif",
+      "body": "Merriweather, serif",
+      "ui": "Cinzel, serif"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tight font-heading font-bold text-ink_dark",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-heading font-semibold text-ink_brown",
+      "h3": "text-2xl font-heading font-medium text-ink_brown",
+      "body": "text-lg leading-relaxed font-body text-ink_brown",
+      "small_label": "text-sm tracking-widest uppercase font-ui text-accent-forest"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-5xl mx-auto px-6 sm:px-8 py-12 sm:py-20",
+    "spacing_scale": "Generous spacing. Use py-16 or py-24 between major sections to let the parchment breathe.",
+    "alignment": "Headings are often centered for a cinematic/storybook feel. Body text is left-aligned for readability.",
+    "texture": "Apply a subtle SVG noise/grain overlay globally with mix-blend-multiply opacity-20 to simulate real parchment paper. Never use pure flat colors for large backgrounds."
+  },
+  "components": {
+    "navigation": {
+      "style": "Sticky top nav. Background bg-parchment/90 with backdrop-blur-md. Bottom border 1px solid border-divider. Links use UI font (Cinzel), text-sm, tracking-widest, uppercase. Active state: underline decoration in accent-gold."
+    },
+    "hero": {
+      "style": "Massive image banner (max-h-[70vh] object-cover), overlaid with a centered 'Title Plate' (bg-parchment_dark/80 backdrop-blur-sm, border 2px solid accent-gold, p-12)."
+    },
+    "accordion": {
+      "style": "Use Shadcn Accordion but heavily customized. Remove default blue focus rings. Wrap each item in a parchment card (bg-paper border-l-4 border-accent-forest shadow-sm). Title should be H3 (Cormorant Garamond). The expand icon can be a classic plus/minus or a chevron-down colored in accent-ember."
+    },
+    "edit_mode": {
+      "toggle": "Floating action button or nav icon (lock/unlock) fixed to top right or nav bar. Requires PIN '264185' to unlock.",
+      "active_state": "When unlocked, all editable text fields and image containers receive a subtle `border-dashed border-2 border-accent-ember bg-white/40 cursor-text` to indicate editability.",
+      "inputs": "Use transparent input/textarea elements that seamlessly blend into the typography when unfocused, but show the edit border when hovered/focused."
+    },
+    "image_container": {
+      "style": "Images should have a subtle sepia or warm filter (sepia-[.20]) to blend with the parchment. Border 4px solid border-divider, rounded-sm. In edit mode, clicking the image prompts for a new URL paste."
+    }
+  },
+  "motion": {
+    "page_transitions": "Fade in smoothly (opacity 0 to 1 over 0.5s).",
+    "accordion": "Smooth height expansion (Shadcn default is fine, adjust easing to ease-out).",
+    "hover": "Nav links and buttons slightly lift (-translate-y-0.5) and text color shifts to accent-ember."
+  },
+  "image_urls": {
+    "hero_shire": {
+      "url": "https://images.unsplash.com/photo-1691359065595-7c74aad7ab20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwzfHxncmVlbiUyMGhpbGxzJTIwbGFuZHNjYXBlfGVufDB8fHx8MTc3NzY2NzU4MXww&ixlib=rb-4.1.0&q=85",
+      "description": "Lush green rolling hills (The Shire)",
+      "usage": "Home/Intro page hero image."
+    },
+    "misty_mountains": {
+      "url": "https://images.unsplash.com/photo-1770410152354-cbd4836e87d3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxtaXN0eSUyMG1vdW50YWlucyUyMGVwaWMlMjBmYW50YXN5JTIwbGFuZHNjYXBlfGVufDB8fHx8MTc3NzY2NzU3Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Epic misty mountains layered in soft tones",
+      "usage": "Events page hero or section image."
+    },
+    "forest_path": {
+      "url": "https://images.unsplash.com/photo-1697353260232-a43bf8371b81?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA5NzB8MHwxfHNlYXJjaHwyfHxmb3Jlc3QlMjBwYXRoJTIwZmFudGFzeXxlbnwwfHx8fDE3Nzc2Njc1ODF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Lush fantasy forest path",
+      "usage": "Philosophy or Motivations section image."
+    },
+    "parchment_bg": {
+      "url": "https://images.unsplash.com/photo-1711107762183-d99536fb7d6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxhbmNpZW50JTIwcGFyY2htZW50JTIwdmludGFnZSUyMHBhcGVyJTIwdGV4dHVyZXxlbnwwfHx8fDE3Nzc2Njc1NzZ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Ancient parchment torn edges",
+      "usage": "Can be used as an image overlay or section background."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Build a React (Vite) frontend with Tailwind CSS.",
+    "Set up React Router with 5 specific routes: '/', '/motivations', '/philosophy', '/traits', '/events'.",
+    "Global State/Storage: Implement a simple React Context or just a custom hook to manage the 'isEditing' boolean and 'content' JSON object, syncing to localStorage. All text and image URLs must be loaded from this state.",
+    "Create a PIN Modal component: Clicking the lock icon opens a modal requesting PIN '264185'. On success, set 'isEditing' to true.",
+    "Editable Content Components: Create reusable <EditableText /> and <EditableImage /> components. When `isEditing` is true, clicking these turns them into inline inputs/textareas or prompts for a new image URL.",
+    "Layout structure: A permanent Top Nav with the 5 links and the lock icon.",
+    "Section Pages: Each of the 4 non-home pages must contain Shadcn Accordions. Fill them with placeholder text about Bilbo Baggins that relates to the section title (e.g., Big 5 Personality Traits: Openness, Conscientiousness, etc.).",
+    "Aesthetics: Include the fonts via Google Fonts in index.html (Cormorant Garamond, Merriweather, Cinzel). Set the body background color to the 'parchment' hex value. Apply a CSS-based noise texture overlay across the app.",
+    "Testing Attributes: MUST include data-testid on every interactive element (links, buttons, accordion triggers, edit inputs) e.g., data-testid='nav-home', data-testid='edit-toggle', data-testid='pin-input', data-testid='save-content'."
+  ]
+}
