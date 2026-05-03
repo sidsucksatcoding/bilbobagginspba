@@ -1,7 +1,10 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from "react";
 import { defaultContent } from "@/data/defaultContent";
 
-const STORAGE_KEY = "hobbit-site-content-v1";
+// v2: bumped after baking real content into defaultContent.js so that any
+// stale v1 saves (mix of old placeholders + edits) don't override the new
+// finalized defaults on devices that had previously edited the site.
+const STORAGE_KEY = "hobbit-site-content-v2";
 const EDIT_KEY = "hobbit-site-edit-v1";
 export const EDIT_PIN = "264185";
 
