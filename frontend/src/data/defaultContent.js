@@ -111,31 +111,31 @@ export const defaultContent = {
       {
         "id": "t1",
         "title": "Openness",
-        "image": "https://i.postimg.cc/wjp3LFJn/1.png",
+        "image": "/1.png",
         "text": "Bilbo starts the story avoiding anything unfamiliar, but by the end he is walking straight into danger on his own. Standing at the edge of Smaug's tunnel, Bilbo describes \"the great glow. The glow of Smaug\" (Tolkien 215). Despite being terrified, he keeps moving forward anyway. This demonstrates how much his openness to new and scary experiences has grown. The hobbit who refused Gandalf at his door is now facing a dragon alone by his choice."
       },
       {
         "id": "t2",
         "title": "Conscientiousness",
-        "image": "https://i.postimg.cc/SxhjCVCp/2.png",
+        "image": "/2.png",
         "text": "Bilbo grows from an unprepared and reluctant burglar into someone the leader. His planning of the escape from the Woodelf kingdom is what leads to the moment where \"they had escaped the dungeons of the king and were through the wood\" (Tolkien 188). He came up with the barrel plan entirely on his own and saw it all the way through. This shows how much more responsible and dependable he has become. Instead of being the liability, he is being the main contributor."
       },
       {
         "id": "t3",
         "title": "Extraversion",
-        "image": "https://i.postimg.cc/nhJMBTBf/3.png",
+        "image": "/3.png",
         "text": "Bilbo becomes much more confident and bold as the story goes on. When he comes face to face with Gollum in the dark, he does not run. Instead he calmly says \"'All right,'\" and agrees to the riddle game (Tolkien 74). This is a huge moment because Bilbo is choosing to engage with a dangerous creature rather than freeze up or panic. It shows a new fearlessness that was never there at the beginning of the story. The shy hobbit who could not even disagree with the dwarves is now holding his own against something truly terrifying."
       },
       {
         "id": "t4",
         "title": "Agreeableness",
-        "image": "https://i.postimg.cc/FH413G35/4.png",
+        "image": "/4.png",
         "text": "As Bilbo grows, he stops thinking about himself and starts thinking about everyone around him. He shows this when he risks everything and \"handed the marvellous [Arkenstone] to Bard\" (Tolkien 272). He knew Thorin would be furious, but he did it anyway because it was the right thing to do. This is one of the clearest signs of his agreeableness: putting others before himself even when it costs him. By the end, Bilbo cares far more about people than treasure.\n"
       },
       {
         "id": "t5",
         "title": "Neuroticism",
-        "image": "https://i.postimg.cc/t4j7WDWj/5.png",
+        "image": "/5.png",
         "text": "Early on Bilbo is easily scared and overwhelmed, but he slowly learns to stay calm under pressure. Instead of panicking when faced with Gollum, Bilbo thinks carefully and decides \"perhaps if he followed him, Gollum might lead him to some way of escape without meaning to\" (Tolkien 84). Rather than acting out of fear, he takes a breath and thinks the situation through. This shows his neuroticism dropping as the story goes on. He is becoming someone who handles stress with a clear head instead of falling apart."
       }
     ]
